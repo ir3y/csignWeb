@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG CYCU 開會簽到</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="card-header">GDG CYCU 開會簽到</div>
+
+    <div class="error-box" id="error-box"></div>
+
+    <div id="main-content">
+        <div class="date-display" id="current-date"></div>
+
+        <form class="form-container" id="sign-form">
+            <div class="form-row">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required autocomplete="off">
+            </div>
+
+            <div class="form-row">
+                <label for="code">識別碼:</label>
+                <input type="text" id="code" name="code" maxlength="4" required autocomplete="off">
+            </div>
+
+            <button type="submit" class="submit-btn">確認簽到</button>
+            <div class="message" id="msg"></div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
