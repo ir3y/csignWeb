@@ -2,29 +2,37 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GDG CYCU 開會簽到</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="card">
-    <div class="card-header">GDG CYCU 開會簽到</div>
+    <div class="card-header">
+        <span class="badge-dot"></span>
+        GDG CYCU 開會簽到
+    </div>
 
     <div class="error-box" id="error-box"></div>
 
     <div id="main-content">
-        <div class="date-display" id="current-date"></div>
+        <div class="date-wrapper">
+            <div class="date-display" id="current-date"></div>
+        </div>
 
         <form class="form-container" id="sign-form">
-            <div class="form-row">
-                <label for="name">姓名:</label>
-                <input type="text" id="name" name="name" required autocomplete="off">
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" placeholder="請輸入您的真實姓名" required autocomplete="off">
             </div>
 
-            <div class="form-row">
-                <label for="code">識別碼:</label>
-                <input type="text" id="code" name="code" maxlength="4" required autocomplete="off">
+            <div class="form-group">
+                <label for="code">識別碼</label>
+                <input type="text" id="code" name="code" maxlength="4" placeholder="請輸入 4 位識別碼" required autocomplete="off">
             </div>
 
             <button type="submit" class="submit-btn">確認簽到</button>
