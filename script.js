@@ -10,6 +10,8 @@ const params = new URLSearchParams(window.location.search);
 const sessionCode = params.get('s');
 
 if (sessionCode) {
+    window.history.replaceState({}, document.title, window.location.pathname);
+
     fetch(`${API_BASE_URL}/api/status?s=${encodeURIComponent(sessionCode)}`)
         .then(res => res.json())
         .then(data => {
