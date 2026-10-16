@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://api-csign.darkyu.me";
+const API_BASE_URL = "https://csignbot.onrender.com";
 
 const now = new Date();
 const yyyy = now.getFullYear();
